@@ -1,0 +1,11 @@
+First,Last,Title,Description,Department,EmployeeID,OU,samAccountName,UserPrincipalName,Password
+kevin,minion,Lead Field Agent,,Operations,AVL-001,"""OU=Users,DC=sevenseas,DC=local""",kevin.minion,Kevin,Banana123
+stuart,minion,Surveillance Specialist,bwahahahaha,Intelligence,AVL-002,"""OU=Users,DC=sevenseas,DC=local""",stuart.minion,Stuart,Guitar!456
+bob,minion,Junior Agent,,Operations,AVL-003,"""OU=Users,DC=sevenseas,DC=local""",bob.minion,Bob,Fluffy!789
+dave,minion,Weapons Technician,mi legti tis RocketPanda!321,Armory,AVL-004,"""OU=Users,DC=sevenseas,DC=local""",dave.minion,Dave,RocketPanda!321
+jerry,minion,Communications Officer,BAANAANAA!!!,Technology,AVL-005,"""OU=Users,DC=sevenseas,DC=local""",jerry.minion,Jerry,MinionTalk!987
+phil,minion,Security Officer,,Security,AVL-006,"""OU=Users,DC=sevenseas,DC=local""",phil.minion,Phil,NoBananas!
+tim,minion,Logistics Coordinator,,Support,AVL-007,"""OU=Users,DC=sevenseas,DC=local""",tim.minion,Tim,FastWheels
+carl,minion,Research Assistant,,Support,AVL-008,"""OU=Users,DC=sevenseas,DC=local""",carl.minion,Carl,PurplePotion
+mark,minion,Explosives Expert,ria ria boom ria!,Armory,AVL-009,"""OU=Users,DC=sevenseas,DC=local""",mark.minion,Mark,BoomBoom!
+ken,minion,Undercover Agent,,Operations,AVL-010,"""OU=Users,DC=sevenseas,DC=local""",ken.minion,Ken,Sneaky123!
