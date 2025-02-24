@@ -1,0 +1,8 @@
+ansible_password: Password123
+ansible_connection: winrm
+ansible_winrm_transport: ntlm
+ansible_port: 5985
+ad_domain: SEVENSEAS.LOCAL
+domain_admin: Administrator@SEVENSEAS.LOCAL
+server_hostname: PORTROYAL-DC
+workstation_hostname: DAUNTLESS
