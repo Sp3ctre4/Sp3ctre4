@@ -1,0 +1,7 @@
+domaincontrollers:
+  hosts:
+    192.168.x.x
+
+workstations:
+  hosts:
+    192.168.x.x
