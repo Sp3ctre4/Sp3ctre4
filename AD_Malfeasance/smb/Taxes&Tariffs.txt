@@ -1,0 +1,61 @@
+### **Port Royal Taxes & Tariffs: Pirate Edition**
+
+1. **Pirate Bounty Tax**  
+   **Tax Rate:** 10% of captured pirate booty  
+   **Description:** A levy imposed on any treasure plundered from pirate ships. Paid to the Crown to fund the Royal Navy’s continued efforts to eradicate piracy. Failure to pay results in imprisonment at the gallows.
+
+2. **Privateer License Fee**  
+   **Tax Rate:** 50 gold coins per month  
+   **Description:** Authorized pirates (privateers) must pay a fee to the Crown to continue their lawful plunder. This allows them to legally raid foreign vessels in exchange for a percentage of the spoils going to the Crown.
+
+3. **Rum Tax**  
+   **Tax Rate:** 5% per bottle of imported rum  
+   **Description:** An excise tax on the most beloved pirate beverage. Applies to all imported rum and spirits sold in Port Royal’s taverns. Excessive taxation has led to frequent complaints from the local pirate population.
+
+4. **Pirate Flag Tax**  
+   **Tax Rate:** 1 silver coin per flag  
+   **Description:** A fee for any pirate ship that flies a Jolly Roger or any variation thereof. Ships must register their flag with the Port Royal authorities to avoid confusion and potential piracy charges.
+
+5. **Buried Treasure Registration Tax**  
+   **Tax Rate:** 25% of estimated value of buried treasure  
+   **Description:** Any pirate or adventurer who buries treasure on Port Royal land is required to report the treasure’s location. If found later, the finder must pay a hefty tax or face confiscation.
+
+6. **Seaworthy Vessel Tariff**  
+   **Tariff Rate:** 100 gold coins per ship  
+   **Description:** All pirate vessels docked in Port Royal’s harbor must pay a tariff to ensure their seaworthiness. Failure to comply results in the ship being seized by the Royal Navy.
+
+7. **Smuggling Goods Duty**  
+   **Duty Rate:** 20% on smuggled goods  
+   **Description:** Applies to goods brought into Port Royal illegally, such as weapons, contraband rum, or gold. Known smugglers are especially taxed heavily, with severe penalties for evading this duty.
+
+8. **Rum Runner’s Wharf Fee**  
+   **Fee Rate:** 15 gold coins per docked ship  
+   **Description:** The fee for any pirate ship that docks at the secretive wharves used for smuggling rum or weapons. The Royal Navy turns a blind eye, but this fee must be paid to avoid raising suspicion.
+
+9. **Sea Wench Tax**  
+   **Tax Rate:** 10% of earnings  
+   **Description:** A tax on the earnings of tavern wenches, dancers, and entertainers who service sailors and pirates in the notorious establishments of Port Royal. Often used to line the pockets of corrupt officials.
+
+10. **Shipwreck Salvage Tariff**  
+    **Tariff Rate:** 5% of all salvaged goods  
+    **Description:** A levy on goods recovered from wrecked ships found along the shores of Port Royal. Though the wreckage is often considered public property, a portion of the haul must be paid to the Crown’s coffers.
+
+11. **Royal Navy Protection Fee**  
+    **Fee Rate:** 50 gold coins for "protection"  
+    **Description:** A protection fee imposed by the Royal Navy for pirate ships operating near Port Royal's shores. Paying the fee grants limited immunity from Navy pursuit, ensuring safe passage for pirates. 
+
+12. **Black Market Fee**  
+    **Fee Rate:** 10% of the total market value of illegal trade goods  
+    **Description:** For those seeking to sell goods on the black market, a hidden tariff is levied on all goods exchanged under the table. This goes directly to corrupt officials who look the other way when pirates conduct illicit trade.
+
+13. **Gallows Escape Tax**  
+    **Tax Rate:** 100 gold coins  
+    **Description:** A special "exit fee" for pirates who manage to escape the gallows. This hefty sum must be paid to avoid recapture by the Royal Navy.
+
+14. **Treasure Map Registration Fee**  
+    **Fee Rate:** 15 gold coins per map  
+    **Description:** A tax levied on pirates who possess treasure maps. Pirates must register their maps with Port Royal’s authorities. Failure to do so may result in the treasure being seized by the Crown.
+
+15. **Rum Trade Duty**  
+    **Duty Rate:** 10% per cask of rum  
+    **Description:** Applies to all rum imported into Port Royal for trade. Popular among pirates and sailors, but also a frequent target of black market transactions to avoid the tax.
