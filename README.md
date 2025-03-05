@@ -1,5 +1,5 @@
 # Who am I?
-- Nerd about cybersecurity
+- Super Cool, Epic Hacker! (not really)
 - Stubborn as a rock
 - Fool of a Took
 
