@@ -1,4 +1,7 @@
-## Trouble Maker, Rabble Rouser, Fool of a Took.
+# Who am I?
+- Nerd about cybersecurity
+- Stubborn as a rock
+- Fool of a Took
 
 I have about 76.3% an idea of what I'm doing 34% of the time.
 
