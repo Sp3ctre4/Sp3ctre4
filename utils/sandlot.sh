@@ -2,12 +2,24 @@
 # Sandlot. Bloodhound Installer Script for Legacy and CE
 # Sp3ctre4
 # July 1, 2025
-
+#
+### Some Links for Quick Reference (in case of breakage)
 # The Official Install documentation are not followed here. This is a custom install solution.
 #
-# The docker compose file is from here:
+# Official Bloodhound CE Quickstart Guide:
+# https://bloodhound.specterops.io/get-started/quickstart/community-edition-quickstart
+#
+# The Docker Compose File Used for CE
 # https://github.com/SpecterOps/BloodHound/blob/main/examples/docker-compose/docker-compose.yml
 #
+# Legacy Install Documentation:
+# https://bloodhound.readthedocs.io/en/latest/installation/linux.html
+#
+# Neo4j Debian Install Documentation:
+# https://neo4j.com/docs/operations-manual/current/installation/linux/debian/
+#
+# Old Neo4j Packages (4.4 used for Legacy):
+# https://debian.neo4j.com/
 
 # Script Arguments
 MODE="${1}"
@@ -56,7 +68,7 @@ if [[ "${HOUND}" == "legacy" ]]; then
         IS_LEGACY=1
 fi
 
-### Functions
+### Function Declarations
 
 # base install features that don't depend on either version of bh
 base_install(){
@@ -68,7 +80,35 @@ base_install(){
 
 # install bloodhound legacy
 legacy_install(){
-        echo "legacy"
+	echo "[*] Adding NeoTechnology's GPG Key to /etc/apt/trusted.gpg.d/neotechnology.gpg"
+	curl -fsSL https://debian.neo4j.com/neotechnology.gpg.key | \
+		sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/neotechnology.gpg
+
+	echo "[*] Adding Neo4j v4.4 to /etc/apt/sources.list.d/neo4j.list"
+	echo 'deb https://debian.neo4j.com stable 4.4' | \
+		sudo tee /etc/apt/sources.list.d/neo4j.list
+
+	echo "[*] Updating APT Repository"
+	sudo apt update -y
+
+        echo "[*] Installing OpenJDK v11 for use with Neo4j"
+	sudo apt install openjdk-11-jdk -y
+
+	echo "[*] Installing APT-Transport"
+	sudo apt install apt-transport-https -y
+
+	echo "[*] Installing Neo4j v4.4"
+	sudo apt install neo4j -y
+
+	echo "[*] Updating Java Alternative to OpenJDK 11"
+	sudo update-java-alternatives -s "java-1.11.0-openjdk-amd64"
+
+	echo "[*] Downloading Legacy GUI from Legacy Release Page"
+	wget "https://github.com/SpecterOps/BloodHound-Legacy/releases/download/v4.3.1/BloodHound-linux-x64.zip"
+
+	echo "[*] Extracting BloodHound-linx-x64.zip into ./bloodhound workspace"
+	unzip -q "./BloodHound-linux-x64.zip" -d bloodhound
+	rm "./BloodHound-linux-x64.zip"
 }
 
 # install bloodhound ce
@@ -178,7 +218,20 @@ base_remove(){
 
 # remove bloodhound legacy
 remove_legacy(){
-        echo "legacy"
+        echo "[*] Stopping Neo4j Database"
+	sudo neo4j stop
+
+	echo "[*] Resetting Java Alternative"
+	sudo update-java-alternatives -s "java-1.21.0-openjdk-amd64"
+
+	echo "[*] Uninstalling Neo4j v4.4, apt-transport, and openjdk-11"
+	sudo apt remove neo4j apt-transport-https openjdk-11-jdk -y
+
+	echo "[*] Removing NeoTechnology Keyring from /etc/apt/trusted.gpg.d/"
+	sudo rm /etc/apt/trusted.gpg.d/neotechnology.gpg
+
+	echo "[*] Removing Neo4j v4.4 Repo from /etc/apt/sources.list.d/"
+	sudo rm /etc/apt/sources.list.d/neo4j.list
 }
 
 # remove bloodhound ce
@@ -203,30 +256,39 @@ base_cleanup(){
 }
 
 
-### Begin Main Body
+### Main
 
 if [[ "${IS_INSTALL}" -eq 1 ]] && [[ "${IS_LEGACY}" -eq 1 ]]; then
-        echo "===== Installing Bloodhound Legacy ====="
+        echo "===== Installing BloodHound Legacy ====="
         base_install
         legacy_install
         base_cleanup
+	echo ""
+	echo "===== BloodHound Legacy Installed! ====="
+	echo " - Start Neo4j Database with \"sudo neo4j start\""
+	echo " - Wait for Database, then go to http://localhost:7474 and"
+	echo "   log in with neo4j:neo4j, then change password"
+	echo " - Then cd into BloodHound-linux-x64 and run the application"
+	echo " - run with \"sudo ./BloodHound --no-sandbox\""
 elif [[ "${IS_INSTALL}" -eq 1 ]] && [[ "${IS_LEGACY}" -ne 1 ]]; then
         echo "===== Installing Bloodhound CE ====="
         base_install
         ce_install
         base_cleanup
-        echo "===== Bloodhound CE Installed! ====="
+	echo ""
+        echo "===== BloodHound CE Installed! ====="
         echo " - Inside the ./bloodhound dir is the compose file"
         echo " - run \"sudo docker compose up\" to start bloodhound ce"
         echo -e " - wait for containers to start, then copy the default password and\n  \
                 go to http://localhost:8080/ with email == admin"
 elif [[ "${IS_INSTALL}" -ne 1 ]] && [[ "${IS_LEGACY}" -eq 1 ]]; then
-        echo "===== Removing Bloodhound Legacy ====="
+        echo "===== Removing BloodHound Legacy ====="
         base_remove
         remove_legacy
         base_cleanup
+	echo "===== BloodHound Legacy Removed ====="
 else
-        echo "===== Removing Bloodhound CE ====="
+        echo "===== Removing BloodHound CE ====="
         base_remove
         remove_ce
         base_cleanup
