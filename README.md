@@ -1,5 +1,4 @@
 # Who am I?
-- Super Cool Epic Hacker! (not really)
 - Stubborn as a rock
 - Fool of a Took
 
