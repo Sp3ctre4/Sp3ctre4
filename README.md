@@ -1,7 +1,10 @@
-# Who am I?
-- Stubborn as a rock
-- Fool of a Took
+## Follower of Christ
+> Sinner saved by his grace
 
-I have about 76.3% an idea of what I'm doing 34% of the time.
 
-Add stuff here I guess 🤷 idk
+## Aspiring Pentester
+> Studying cybersecurity to make the world a safer place
+
+
+## Circus Enthusiast
+> Juggling, Unicycling, Tumbling. Outside, in the world, enjoying creation.
